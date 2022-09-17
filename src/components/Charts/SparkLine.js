@@ -1,8 +1,10 @@
 import React from 'react';
 import { SparklineComponent, Inject, SparklineTooltip} from "@syncfusion/ej2-react-charts";
+import {useStateContext} from "../../context/ContextProvider";
 
 
 function SparkLine({id, height, width, color, data, type, currentColor}) {
+    const { currentMode } = useStateContext();
     return (
         <SparklineComponent
             id={id}

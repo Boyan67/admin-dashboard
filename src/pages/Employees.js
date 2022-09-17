@@ -6,8 +6,9 @@ import {Header} from '../components'
 
 function Employees(props) {
     return (
-        <div className={"m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl"}>
+        <div className={"m-2 md:m-10 p-2 md:p-10 dark:bg-secondary-dark-bg bg-white"}>
             <Header title={"Employees"} category={"Page"}></Header>
+            <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded" style={{height: "3px", width: "100%", marginBottom: 50, marginTop: 10}}/>
             <GridComponent
                            dataSource={employeesData}
                            allowPaging

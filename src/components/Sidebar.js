@@ -4,14 +4,16 @@ import {SiShopware} from "react-icons/si";
 import {MdOutlineCancel} from "react-icons/md";
 import {TooltipComponent} from "@syncfusion/ej2-react-popups";
 import {useStateContext} from "../context/ContextProvider";
+import logo from '../data/logo.png'
 
 import {links} from "../data/dummy";
 
 function Sidebar(props) {
     const {activeMenu, setActiveMenu, screenSize} = useStateContext()
 
-    const activeLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg dark:text-white text-md m-2"
-    const normalLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray"
+    const activeLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg dark:text-white text-md m-2 bg-white/50 text-white font-semibold"
+    const normalLink = "nav-link flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-100 " +
+        "dark:text-gray-200 dark:hover:text-black hover:bg-light-gray hover:text-blue-800 font-medium"
 
     const handleCloseSideBar = () => {
         if(activeMenu && screenSize <= 900){
@@ -27,14 +29,14 @@ function Sidebar(props) {
                         <Link to="/" onClick={() => { handleCloseSideBar()
                         }} className="items-center gap-3 ml-3
                     mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-800">
-                            <SiShopware/> <span>Shoppy</span>
+                            <img alt={"logo"} src={logo} style={{height: 50}}/>
                         </Link>
                         <TooltipComponent content="menu" position="BottomCenter">
                             <button type={"button"} onClick={() => { setActiveMenu(!activeMenu)
                             }}
                                     className="text-xl rounded-full p-3
-                                hover:bg-light-gray mt-4 block">
-                                <MdOutlineCancel/>
+                                mt-4 block">
+                                <MdOutlineCancel style={{color: "#fff"}}/>
                             </button>
                         </TooltipComponent>
 
@@ -43,7 +45,7 @@ function Sidebar(props) {
                     <div className={"mt-10"}>
                         {links.map((item) => (
                             <div key={item.title}>
-                                <p className="text-gray-400 m-3 mt-4 uppercase ">
+                                <p className="text-gray-300 m-3 mt-4 ">
                                     {item.title}
                                 </p>
                                 {item.links.map((link) => (
@@ -53,7 +55,7 @@ function Sidebar(props) {
                                              className={({ isActive }) => isActive ? activeLink : normalLink}
                                     >
                                         {link.icon}
-                                        <span className={"capitalize"}>
+                                        <span className={"uppercase"}>
                                             {link.name}
                                         </span>
                                     </NavLink>

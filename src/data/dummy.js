@@ -475,7 +475,7 @@ export const links = [
     links: [
       {
         name: 'ecommerce',
-        icon: <FiShoppingBag />,
+        icon: <FiShoppingBag size={23}/>,
       },
     ],
   },
@@ -485,11 +485,11 @@ export const links = [
     links: [
       {
         name: 'orders',
-        icon: <AiOutlineShoppingCart />,
+        icon: <AiOutlineShoppingCart size={23}/>,
       },
       {
         name: 'employees',
-        icon: <IoMdContacts />,
+        icon: <IoMdContacts size={23}/>,
       },
     ],
   },
@@ -498,19 +498,19 @@ export const links = [
     links: [
       {
         name: 'calendar',
-        icon: <AiOutlineCalendar />,
+        icon: <AiOutlineCalendar size={23}/>,
       },
       {
         name: 'kanban',
-        icon: <BsKanban />,
+        icon: <BsKanban size={23}/>,
       },
       {
         name: 'editor',
-        icon: <FiEdit />,
+        icon: <FiEdit size={23}/>,
       },
       {
         name: 'color-picker',
-        icon: <BiColorFill />,
+        icon: <BiColorFill size={23}/>,
       },
     ],
   },
@@ -519,36 +519,36 @@ export const links = [
     links: [
       {
         name: 'line',
-        icon: <AiOutlineStock />,
+        icon: <AiOutlineStock size={23}/>,
       },
       {
         name: 'area',
-        icon: <AiOutlineAreaChart />,
+        icon: <AiOutlineAreaChart size={23}/>,
       },
 
       {
         name: 'bar',
-        icon: <AiOutlineBarChart />,
+        icon: <AiOutlineBarChart size={23}/>,
       },
       {
         name: 'pie',
-        icon: <FiPieChart />,
+        icon: <FiPieChart size={23}/>,
       },
       {
         name: 'financial',
-        icon: <RiStockLine />,
+        icon: <RiStockLine size={23}/>,
       },
       {
         name: 'color-mapping',
-        icon: <BsBarChart />,
+        icon: <BsBarChart size={23}/>,
       },
       {
         name: 'pyramid',
-        icon: <GiLouvrePyramid />,
+        icon: <GiLouvrePyramid size={23}/>,
       },
       {
         name: 'stacked',
-        icon: <AiOutlineBarChart />,
+        icon: <AiOutlineBarChart size={23}/>,
       },
     ],
   },
